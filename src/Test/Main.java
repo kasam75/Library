@@ -39,7 +39,9 @@ public class Main {
                         System.out.print(" / " + book.bookName);
                         System.out.print(" / " + book.genreString);
                         System.out.print(" / " + book.writer);
+                        System.out.println("\n\n");
                     }
+                    sc.nextLine();
                     //sc.nextLine (고유번호 받아오고 )
                     //루프문을 돌리거나 for문 을 돌리면서 38번 book.isbn 43번라인 고유번호와 비교지정한 북을 해당북을 지우고 대여리스트에 추가  .remove
 
@@ -51,9 +53,12 @@ public class Main {
                         System.out.print(" / " + book.bookName);
                         System.out.print(" / " + book.genreString);
                         System.out.print(" / " + book.writer);
+                        System.out.println("\n\n");
+
                     }
                     System.out.println("반납하실 책의 고유번호를 입력해 주세요");
 
+                    sc.nextLine();
                     //sc.nextLine (고유번호 받아오고 )
 
                     //루프문을 돌리거나 for문 을 돌리면서 50 book.isbn 57번라인 고유번호와 비교지정한 대여리스트에서 삭제하고 .remove 북리스트에 추가하기 .add
@@ -65,7 +70,7 @@ public class Main {
             // 라이브러리와?연결해서 컬렉션 세이브 기능을 통해 기록 조건은 맴버에서 가져옴
 
 
-            System.out.println("\n\n종료를 하시겠 습니까? 종료 하시려면 3을 입력해 주세요");
+            System.out.println("\n\n 계속 하시려면 아무 키나 입력해 주세요 \n\n종료를 하시려면 3을 입력해 주세요");
             String next3 = sc.nextLine();
             if (next3.equals("3")) {
                 System.out.println("프로젝트 도서관에 방문해주셔서 감사합니다. 안녕히 가세요");

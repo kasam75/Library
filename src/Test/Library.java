@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Library {
     List<Book> bookList;
+    List<Book> rentBook;
 
     Library() {
 
@@ -23,6 +24,10 @@ public class Library {
                         new Book(12, "호밀밭의 파수꾼", "청소년 문학", "제롬 데이비드 샐린저"),
                         new Book(13, "셜록홈즈 스페셜", "추리", "아서 코난 도일"),
                         new Book(14, "오리엔트 특급 살인", "추리", "애거사 크리스티")
+                )
+        );
+        rentBook = new ArrayList<>(
+                List.of(
 
                 )
         );
