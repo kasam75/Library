@@ -3,13 +3,14 @@ package Test;
 import Test2.Member;
 import Test2.MyLibrary;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Book myBook = new Book(1,"이","장","작");
-        Library Library1 = new Library();
+        Library library1 = new Library();
 
 
         System.out.println("\n프로젝트 도서관에 오신걸 환영합니다.\n");
@@ -21,6 +22,15 @@ public class Main {
             if (next1.equals("1")) {
                 //라이브러리와 연결
                 System.out.println("\n프로젝트 도서관의 책 목록 입니다.\n");
+                List<Book> bookList = library1.bookList;
+
+                for(Book book : bookList){
+                    System.out.print("\n  "+ book.isbn);
+                    System.out.print(" / "+ book.bookName);
+                    System.out.print(" / "+ book.genreString);
+                    System.out.print(" / "+ book.writer);
+
+                }
             } else if (next1.equals("2")) {
                 System.out.println("\n대출/반납 하실 책의 번호를 입력해 주세요.\n");
             }
@@ -37,3 +47,5 @@ public class Main {
         }
     }
 }
+//라이브러리에서 북 을 만들고
+//다음 할일이 대출 반납 구현 같은 다음기능 구현 대출 번호 다르게 하기
