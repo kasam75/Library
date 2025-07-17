@@ -20,15 +20,46 @@ public class Main {
                 System.out.println("\n프로젝트 도서관의 책 목록 입니다.\n");
                 List<Book> bookList = library1.bookList;
 
-                for(Book book : bookList){
-                    System.out.print("\n  "+ book.isbn);
-                    System.out.print(" / "+ book.bookName);
-                    System.out.print(" / "+ book.genreString);
-                    System.out.print(" / "+ book.writer);
+                for (Book book : bookList) {
+                    System.out.print("\n  " + "고유 번호  " + book.isbn);
+                    System.out.print(" / " + book.bookName);
+                    System.out.print(" / " + book.genreString);
+                    System.out.print(" / " + book.writer);
 
                 }
             } else if (next1.equals("2")) {
-                System.out.println("\n대출/반납 하실 책의 번호를 입력해 주세요.\n");
+                System.out.println("\n대여가 필요하시면 1을 입력해주세요.\n반납이 필요하시면 2를 엽력해주세요.\n");
+                List<Book> bookList = library1.bookList;
+                String next2 = sc.nextLine();
+
+                if (next2.equals("1")) {
+                    System.out.println("대여가 필요하신 책의 고유번호를 입력주세요");
+                    for (Book book : bookList) {
+                        System.out.print("\n  " + "고유 번호  " + book.isbn);
+                        System.out.print(" / " + book.bookName);
+                        System.out.print(" / " + book.genreString);
+                        System.out.print(" / " + book.writer);
+                    }
+                    //sc.nextLine (고유번호 받아오고 )
+                    //루프문을 돌리거나 for문 을 돌리면서 38번 book.isbn 43번라인 고유번호와 비교지정한 북을 해당북을 지우고 대여리스트에 추가  .remove
+
+                    System.out.println(bookList);
+
+                } else if (next2.equals("2")) {
+                    for (Book book : bookList) {//북리스트가 아닌 라이브러리에 새로만든 대여리스를 돌려서 추가해야함 add
+                        System.out.print("\n  " + "고유 번호  " + book.isbn);
+                        System.out.print(" / " + book.bookName);
+                        System.out.print(" / " + book.genreString);
+                        System.out.print(" / " + book.writer);
+                    }
+                    System.out.println("반납하실 책의 고유번호를 입력해 주세요");
+
+                    //sc.nextLine (고유번호 받아오고 )
+
+                    //루프문을 돌리거나 for문 을 돌리면서 50 book.isbn 57번라인 고유번호와 비교지정한 대여리스트에서 삭제하고 .remove 북리스트에 추가하기 .add
+                    //소트 기능 추가(정렬)끝나고
+                }
+
             }
 
             // 라이브러리와?연결해서 컬렉션 세이브 기능을 통해 기록 조건은 맴버에서 가져옴
