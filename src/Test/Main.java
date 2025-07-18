@@ -8,7 +8,6 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Library library1 = new Library();
-        Book targetBook = null;
 
 
         System.out.println("\n프로젝트 도서관에 오신걸 환영합니다.\n");
