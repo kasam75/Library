@@ -27,13 +27,12 @@ public class Library {
                 )
         );
         rentBook = new ArrayList<>(
-                List.of(
+                List.of
+                        (new Book(15, "차라투스트라는 이렇게 말했다 ", "철학", "니체")
 
                 )
         );
     }
-
-
 }
 
 //리스트 오브는 스테틱 메세지

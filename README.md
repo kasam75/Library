@@ -32,3 +32,9 @@ new Book(isbn);
 
 
     }
+ListIterator<Book> bookIterator = bookList.iterator();
+while (bookIterator.hasNext()) {
+Book book = bookIterator.next();
+if (book.isbn == inputIsbn) {
+bookIterator.add(book);
+rentBook.remove();
